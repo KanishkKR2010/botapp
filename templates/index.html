@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Python AI — Offline</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span>PY</span> Python AI</div>
+    <button class="nav active" data-tab="chat">Chatbot</button>
+    <button class="nav" data-tab="editor">Code Editor</button>
+    <button class="nav" data-tab="history">History</button>
+    <div class="offline">● OFFLINE</div>
+  </aside>
+
+  <main>
+    <section id="chat" class="tab active">
+      <header>
+        <div>
+          <h1>Python AI</h1>
+          <p>Your offline Python tutor</p>
+        </div>
+        <button id="clearChat" class="secondary">Clear</button>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="quick">
+        <button data-prompt="Explain list comprehension">List comprehension</button>
+        <button data-prompt="Explain for loop">For loops</button>
+        <button data-prompt="Explain functions in Python">Functions</button>
+        <button data-prompt="Explain dictionaries">Dictionaries</button>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <textarea id="message" placeholder="Ask anything about Python..." rows="2"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="editor" class="tab">
+      <header>
+        <div>
+          <h1>Python Code Editor</h1>
+          <p>Run simple Python programs locally</p>
+        </div>
+        <button id="runBtn">▶ Run</button>
+      </header>
+
+      <textarea id="code" spellcheck="false">name = "Python"
+for i in range(3):
+    print(name, i)</textarea>
+
+      <h2>Output</h2>
+      <pre id="output">Click Run to execute your code.</pre>
+    </section>
+
+    <section id="history" class="tab">
+      <header>
+        <div>
+          <h1>Chat History</h1>
+          <p>Saved locally on this PC</p>
+        </div>
+      </header>
+      <div id="historyList" class="history"></div>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
